@@ -1,0 +1,16 @@
+{
+  "reproducibility_same_seed": "PASS (verified against second independent run)",
+  "seed": 20261102,
+  "q": 4,
+  "sha256": {
+    "train.csv": "acd5416b87f0f6dbbdf5e5b8347a7b1a33a4f79ecc7df1f0f6dfb5e8b2817ff6",
+    "validation.csv": "20f4998f4f2b1f8b3e8aef93b034057ed379cf76bfaf2703d9fafce3f2db3459",
+    "test.csv": "7dea4df5a2bce513bde04d9268d07add69b46d93d5a53a1ecfab52bb83eb073a",
+    "sequences.csv": "de79ad003c3965d9c4d7f1bb212ad039a7a171aedc5f6dc3bc8ef0715e6348d2",
+    "config.json": "6e4f32ddf43f9185694f9393b9c08f8d450c2d22114d3f6638e4bff3d526ae9d",
+    "validation_report.json": "4136a2ec924518cc89ab4212c2f5e30ba7c03cd259f96f27e91d7045447bae66",
+    "pid_dataset_full_v1_1.py": "d9a66f38c5eec948b93cd3a820d5465be564fa3f22bc0342c80c2bcedc188609",
+    "pid_dataset_pilot_v1_1.py": "53986b64f823daef75623c61343d4064343fe42a844f6264120eb6d0ff31bd0e",
+    "README_PID_Full_v1_1.md": "85305c869e3cfbad83632eb7637955738be40dbf21bd03e79cba27c36a465f98"
+  }
+}

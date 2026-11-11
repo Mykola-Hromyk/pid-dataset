@@ -1,0 +1,619 @@
+{
+  "dataset_version": "PID Dataset v1.1 Full",
+  "q": 4,
+  "Ts_s": 10.0,
+  "master_seed": 20261102,
+  "coefficient_weight_check": {
+    "status": "PASS",
+    "q": 4,
+    "nonproportionality": "PASS",
+    "l1_norms": [
+      0.9999999999999999,
+      1.0,
+      1.0
+    ],
+    "pairwise_abs_cosines": {
+      "Kp/Ki": 5.227300074276779e-17,
+      "Kp/Kd": 0.16666666666666666,
+      "Ki/Kd": 0.5000000000000002
+    }
+  },
+  "splits": {
+    "train": {
+      "mathematical_validation": {
+        "status": "PASS",
+        "checks": {
+          "csv_rows_exact": true,
+          "sequence_count_exact": true,
+          "initial_states_and_recurrence": true,
+          "coefficients_and_pid_algebra": true,
+          "float64_finite_and_input_bounds": true
+        },
+        "rows": 294912,
+        "sequences": 252,
+        "max_equation_absolute_residual": 0.0,
+        "zero_error_hold_checks": 79313
+      },
+      "coverage_validation": {
+        "status": "PASS",
+        "checks": {
+          "all_e_families_each_split": true,
+          "all_z_modes_each_split": true,
+          "every_step_z_has_transition": true,
+          "constant_z_remains_constant": true,
+          "smooth_z_changes": true,
+          "both_e_endpoints": true,
+          "all_z_coordinate_endpoints": true,
+          "all_gain_endpoints": true,
+          "designated_z_corners_present": true,
+          "short_PID_dominance_ge_5pct": true,
+          "long_PID_nonzero_activity": true,
+          "zero_error_hold_in_split": true,
+          "unclipped_u_evidence": true
+        },
+        "short_signal_families": {
+          "ramp_triangle": 30,
+          "step": 30,
+          "accumulate_hold": 30,
+          "multi_sine": 30,
+          "noise": 30,
+          "prbs_pulses": 30,
+          "combined": 30,
+          "sign_compensate": 30
+        },
+        "z_modes": {
+          "smooth": 151,
+          "step": 38,
+          "constant": 63
+        },
+        "z_step_transitions": {
+          "train_short_225_ramp_triangle": 2,
+          "train_short_152_step": 1,
+          "train_short_123_prbs_pulses": 1,
+          "train_short_022_sign_compensate": 2,
+          "train_short_113_ramp_triangle": 2,
+          "train_short_177_ramp_triangle": 1,
+          "train_short_150_sign_compensate": 1,
+          "train_short_052_noise": 1,
+          "train_short_194_multi_sine": 1,
+          "train_short_227_prbs_pulses": 2,
+          "train_short_140_noise": 2,
+          "train_short_030_sign_compensate": 1,
+          "train_short_170_multi_sine": 1,
+          "train_short_136_step": 1,
+          "train_short_167_combined": 2,
+          "train_short_002_multi_sine": 1,
+          "train_short_053_accumulate_hold": 1,
+          "train_short_165_accumulate_hold": 1,
+          "train_short_214_sign_compensate": 1,
+          "train_short_221_accumulate_hold": 1,
+          "train_short_015_combined": 2,
+          "train_short_064_step": 1,
+          "train_short_042_multi_sine": 2,
+          "train_short_157_accumulate_hold": 2,
+          "train_short_095_combined": 1,
+          "train_short_093_accumulate_hold": 3,
+          "train_short_097_ramp_triangle": 2,
+          "train_short_215_combined": 3,
+          "train_short_018_multi_sine": 1,
+          "train_short_176_step": 1,
+          "train_short_237_accumulate_hold": 1,
+          "train_short_111_combined": 2,
+          "train_short_145_ramp_triangle": 2,
+          "train_short_143_combined": 1,
+          "train_short_057_ramp_triangle": 2,
+          "train_short_148_noise": 1,
+          "train_short_003_prbs_pulses": 3,
+          "train_short_078_sign_compensate": 2
+        },
+        "z_step_count_min": 1,
+        "corner_target_count": 16,
+        "corners_observed": 16,
+        "designated_corners_observed": 16,
+        "coefficient_endpoints": {
+          "Kp": {
+            "min": 0.7000000000000001,
+            "max": 1.2999999999999998,
+            "theoretical_min": 0.7,
+            "theoretical_max": 1.3,
+            "both_endpoints_hit": true
+          },
+          "Ki": {
+            "min": 0.003,
+            "max": 0.006999999999999999,
+            "theoretical_min": 0.003,
+            "theoretical_max": 0.007,
+            "both_endpoints_hit": true
+          },
+          "Kd": {
+            "min": 3.0,
+            "max": 7.0,
+            "theoretical_min": 3.0,
+            "theoretical_max": 7.0,
+            "both_endpoints_hit": true
+          }
+        },
+        "observed_ranges": {
+          "e": {
+            "min": -1.0,
+            "max": 1.0
+          },
+          "I": {
+            "min": -2384.1590070766656,
+            "max": 1873.054900222441
+          },
+          "D": {
+            "min": -0.17503373919816578,
+            "max": 0.1683906840064521
+          },
+          "Kp": {
+            "min": 0.7000000000000001,
+            "max": 1.2999999999999998
+          },
+          "Ki": {
+            "min": 0.003,
+            "max": 0.006999999999999999
+          },
+          "Kd": {
+            "min": 3.0,
+            "max": 7.0
+          },
+          "u": {
+            "min": -12.828815183210265,
+            "max": 10.108632781756343
+          }
+        },
+        "z_by_coordinate": [
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          }
+        ],
+        "dominance_by_duration": {
+          "short": {
+            "rows": 245760,
+            "informative_rows": 233010,
+            "dominating_percent": {
+              "P": 37.6945,
+              "I": 49.673,
+              "D": 6.989
+            },
+            "active_nonzero_rows": {
+              "P": 194649,
+              "I": 224790,
+              "D": 122020
+            }
+          },
+          "long": {
+            "rows": 49152,
+            "informative_rows": 43417,
+            "dominating_percent": {
+              "P": 6.6978,
+              "I": 90.3586,
+              "D": 2.9435
+            },
+            "active_nonzero_rows": {
+              "P": 10506,
+              "I": 42133,
+              "D": 2580
+            }
+          },
+          "all": {
+            "rows": 294912,
+            "informative_rows": 276427,
+            "dominating_percent": {
+              "P": 32.826,
+              "I": 56.0633,
+              "D": 6.3536
+            },
+            "active_nonzero_rows": {
+              "P": 205155,
+              "I": 266923,
+              "D": 124600
+            }
+          }
+        },
+        "policy": {
+          "short_dominance_threshold_pct": 5.0,
+          "long_PID_dominance_is_diagnostic_only": true,
+          "gain_endpoints_hit_by_designed_z_corners": true
+        }
+      },
+      "sha256_csv": "acd5416b87f0f6dbbdf5e5b8347a7b1a33a4f79ecc7df1f0f6dfb5e8b2817ff6"
+    },
+    "validation": {
+      "mathematical_validation": {
+        "status": "PASS",
+        "checks": {
+          "csv_rows_exact": true,
+          "sequence_count_exact": true,
+          "initial_states_and_recurrence": true,
+          "coefficients_and_pid_algebra": true,
+          "float64_finite_and_input_bounds": true
+        },
+        "rows": 77824,
+        "sequences": 64,
+        "max_equation_absolute_residual": 0.0,
+        "zero_error_hold_checks": 22357
+      },
+      "coverage_validation": {
+        "status": "PASS",
+        "checks": {
+          "all_e_families_each_split": true,
+          "all_z_modes_each_split": true,
+          "every_step_z_has_transition": true,
+          "constant_z_remains_constant": true,
+          "smooth_z_changes": true,
+          "both_e_endpoints": true,
+          "all_z_coordinate_endpoints": true,
+          "all_gain_endpoints": true,
+          "designated_z_corners_present": true,
+          "short_PID_dominance_ge_5pct": true,
+          "long_PID_nonzero_activity": true,
+          "zero_error_hold_in_split": true,
+          "unclipped_u_evidence": true
+        },
+        "short_signal_families": {
+          "combined": 7,
+          "prbs_pulses": 8,
+          "multi_sine": 8,
+          "step": 8,
+          "accumulate_hold": 7,
+          "noise": 7,
+          "sign_compensate": 7,
+          "ramp_triangle": 8
+        },
+        "z_modes": {
+          "smooth": 38,
+          "constant": 16,
+          "step": 10
+        },
+        "z_step_transitions": {
+          "validation_short_029_accumulate_hold": 2,
+          "validation_short_045_accumulate_hold": 2,
+          "validation_short_058_multi_sine": 1,
+          "validation_short_030_sign_compensate": 1,
+          "validation_short_038_sign_compensate": 2,
+          "validation_short_049_ramp_triangle": 2,
+          "validation_short_052_noise": 1,
+          "validation_short_017_ramp_triangle": 2,
+          "validation_short_022_sign_compensate": 1,
+          "validation_short_003_prbs_pulses": 1
+        },
+        "z_step_count_min": 1,
+        "corner_target_count": 16,
+        "corners_observed": 16,
+        "designated_corners_observed": 16,
+        "coefficient_endpoints": {
+          "Kp": {
+            "min": 0.7000000000000001,
+            "max": 1.2999999999999998,
+            "theoretical_min": 0.7,
+            "theoretical_max": 1.3,
+            "both_endpoints_hit": true
+          },
+          "Ki": {
+            "min": 0.003,
+            "max": 0.006999999999999999,
+            "theoretical_min": 0.003,
+            "theoretical_max": 0.007,
+            "both_endpoints_hit": true
+          },
+          "Kd": {
+            "min": 3.0,
+            "max": 7.0,
+            "theoretical_min": 3.0,
+            "theoretical_max": 7.0,
+            "both_endpoints_hit": true
+          }
+        },
+        "observed_ranges": {
+          "e": {
+            "min": -1.0,
+            "max": 1.0
+          },
+          "I": {
+            "min": -1723.9828174864672,
+            "max": 1745.1518511619363
+          },
+          "D": {
+            "min": -0.1444766739830609,
+            "max": 0.16963307910004705
+          },
+          "Kp": {
+            "min": 0.7000000000000001,
+            "max": 1.2999999999999998
+          },
+          "Ki": {
+            "min": 0.003,
+            "max": 0.006999999999999999
+          },
+          "Kd": {
+            "min": 3.0,
+            "max": 7.0
+          },
+          "u": {
+            "min": -8.775986715714483,
+            "max": 8.250646838875346
+          }
+        },
+        "z_by_coordinate": [
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          }
+        ],
+        "dominance_by_duration": {
+          "short": {
+            "rows": 61440,
+            "informative_rows": 58458,
+            "dominating_percent": {
+              "P": 39.6746,
+              "I": 47.7197,
+              "D": 6.68
+            },
+            "active_nonzero_rows": {
+              "P": 49317,
+              "I": 56430,
+              "D": 30757
+            }
+          },
+          "long": {
+            "rows": 16384,
+            "informative_rows": 14460,
+            "dominating_percent": {
+              "P": 6.6528,
+              "I": 90.5118,
+              "D": 2.8354
+            },
+            "active_nonzero_rows": {
+              "P": 3494,
+              "I": 14048,
+              "D": 828
+            }
+          },
+          "all": {
+            "rows": 77824,
+            "informative_rows": 72918,
+            "dominating_percent": {
+              "P": 33.1263,
+              "I": 56.2056,
+              "D": 5.9176
+            },
+            "active_nonzero_rows": {
+              "P": 52811,
+              "I": 70478,
+              "D": 31585
+            }
+          }
+        },
+        "policy": {
+          "short_dominance_threshold_pct": 5.0,
+          "long_PID_dominance_is_diagnostic_only": true,
+          "gain_endpoints_hit_by_designed_z_corners": true
+        }
+      },
+      "sha256_csv": "20f4998f4f2b1f8b3e8aef93b034057ed379cf76bfaf2703d9fafce3f2db3459"
+    },
+    "test": {
+      "mathematical_validation": {
+        "status": "PASS",
+        "checks": {
+          "csv_rows_exact": true,
+          "sequence_count_exact": true,
+          "initial_states_and_recurrence": true,
+          "coefficients_and_pid_algebra": true,
+          "float64_finite_and_input_bounds": true
+        },
+        "rows": 165120,
+        "sequences": 72,
+        "max_equation_absolute_residual": 0.0,
+        "zero_error_hold_checks": 90025
+      },
+      "coverage_validation": {
+        "status": "PASS",
+        "checks": {
+          "all_e_families_each_split": true,
+          "all_z_modes_each_split": true,
+          "every_step_z_has_transition": true,
+          "constant_z_remains_constant": true,
+          "smooth_z_changes": true,
+          "both_e_endpoints": true,
+          "all_z_coordinate_endpoints": true,
+          "all_gain_endpoints": true,
+          "designated_z_corners_present": true,
+          "short_PID_dominance_ge_5pct": true,
+          "long_PID_nonzero_activity": true,
+          "zero_error_hold_in_split": true,
+          "unclipped_u_evidence": true
+        },
+        "short_signal_families": {
+          "prbs_pulses": 7,
+          "sign_compensate": 8,
+          "step": 7,
+          "multi_sine": 7,
+          "combined": 8,
+          "noise": 8,
+          "ramp_triangle": 7,
+          "accumulate_hold": 8
+        },
+        "z_modes": {
+          "smooth": 43,
+          "step": 11,
+          "constant": 18
+        },
+        "z_step_transitions": {
+          "test_short_036_step": 1,
+          "test_short_034_sign_compensate": 1,
+          "test_short_038_multi_sine": 2,
+          "test_short_006_multi_sine": 1,
+          "test_short_041_accumulate_hold": 3,
+          "test_short_046_multi_sine": 2,
+          "test_short_055_prbs_pulses": 3,
+          "test_short_051_combined": 1,
+          "test_short_011_combined": 2,
+          "test_short_012_step": 1,
+          "test_short_019_combined": 2
+        },
+        "z_step_count_min": 1,
+        "corner_target_count": 16,
+        "corners_observed": 16,
+        "designated_corners_observed": 16,
+        "coefficient_endpoints": {
+          "Kp": {
+            "min": 0.7000000000000001,
+            "max": 1.2999999999999998,
+            "theoretical_min": 0.7,
+            "theoretical_max": 1.3,
+            "both_endpoints_hit": true
+          },
+          "Ki": {
+            "min": 0.003,
+            "max": 0.006999999999999999,
+            "theoretical_min": 0.003,
+            "theoretical_max": 0.007,
+            "both_endpoints_hit": true
+          },
+          "Kd": {
+            "min": 3.0,
+            "max": 7.0,
+            "theoretical_min": 3.0,
+            "theoretical_max": 7.0,
+            "both_endpoints_hit": true
+          }
+        },
+        "observed_ranges": {
+          "e": {
+            "min": -1.0,
+            "max": 1.0
+          },
+          "I": {
+            "min": -2357.065596729949,
+            "max": 2130.5878581914617
+          },
+          "D": {
+            "min": -0.18184082744909064,
+            "max": 0.1727254259886472
+          },
+          "Kp": {
+            "min": 0.7000000000000001,
+            "max": 1.2999999999999998
+          },
+          "Ki": {
+            "min": 0.003,
+            "max": 0.006999999999999999
+          },
+          "Kd": {
+            "min": 3.0,
+            "max": 7.0
+          },
+          "u": {
+            "min": -12.624056316564776,
+            "max": 13.635762292425355
+          }
+        },
+        "z_by_coordinate": [
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          },
+          {
+            "min": -1.0,
+            "max": 1.0
+          }
+        ],
+        "dominance_by_duration": {
+          "short": {
+            "rows": 61440,
+            "informative_rows": 58023,
+            "dominating_percent": {
+              "P": 39.0776,
+              "I": 47.4812,
+              "D": 7.1954
+            },
+            "active_nonzero_rows": {
+              "P": 48104,
+              "I": 56124,
+              "D": 29968
+            }
+          },
+          "long": {
+            "rows": 103680,
+            "informative_rows": 91570,
+            "dominating_percent": {
+              "P": 6.1964,
+              "I": 90.8944,
+              "D": 2.9092
+            },
+            "active_nonzero_rows": {
+              "P": 22126,
+              "I": 88900,
+              "D": 5352
+            }
+          },
+          "all": {
+            "rows": 165120,
+            "informative_rows": 149593,
+            "dominating_percent": {
+              "P": 18.9501,
+              "I": 74.0556,
+              "D": 4.5717
+            },
+            "active_nonzero_rows": {
+              "P": 70230,
+              "I": 145024,
+              "D": 35320
+            }
+          }
+        },
+        "policy": {
+          "short_dominance_threshold_pct": 5.0,
+          "long_PID_dominance_is_diagnostic_only": true,
+          "gain_endpoints_hit_by_designed_z_corners": true
+        }
+      },
+      "sha256_csv": "7dea4df5a2bce513bde04d9268d07add69b46d93d5a53a1ecfab52bb83eb073a"
+    }
+  },
+  "cross_split_checks": {
+    "status": "PASS",
+    "sequence_ids_disjoint": true,
+    "seeds_distinct": true,
+    "total_sequences": 388,
+    "total_rows": 537856,
+    "weight_mapping_is_identical_across_splits": true
+  },
+  "overall_status": "PASS"
+}
