@@ -1,0 +1,91 @@
+{
+  "purpose": "Synthetic pretraining on approximate physical model (NOT experimentally validated)",
+  "shape_trajectories": [
+    500,
+    193,
+    3,
+    11
+  ],
+  "dtype": "float32",
+  "feature_order": [
+    "T_grain_C",
+    "W_grain_pct",
+    "grain_wheat",
+    "grain_corn",
+    "grain_barley",
+    "grain_rye",
+    "grain_oats",
+    "mass_kg",
+    "T_room_C",
+    "T_vent_C",
+    "air_flow_m3_s"
+  ],
+  "graph_edges_directed": [
+    [
+      0,
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      2,
+      1
+    ]
+  ],
+  "one_window_x_shape": [
+    48,
+    3,
+    11
+  ],
+  "one_window_target_shape": [
+    3
+  ],
+  "target_definition": "delta_T_C = trajectories[sid,target_frame,:,0] - trajectories[sid,last_input_frame,:,0]",
+  "prediction_horizon_minutes": 15,
+  "window_duration_nominal_hours": 12.0,
+  "window_stride_minutes": 60,
+  "index_counts": {
+    "train": 12950,
+    "val": 2775,
+    "test": 2775
+  },
+  "seed": 42,
+  "scenarios": 500,
+  "numeric_dt_seconds": 60,
+  "references": "Parameters of the previously discussed approximate heat balance; assumptions below are modelling choices.",
+  "assumptions": {
+    "bulk_densities_kg_m3": {
+      "wheat": 750.0,
+      "corn": 720.0,
+      "barley": 620.0,
+      "rye": 710.0,
+      "oats": 450.0
+    },
+    "cp_reference_at_12pct_J_kg_K": {
+      "wheat": 1906.0,
+      "corn": 1805.0,
+      "barley": 1516.0,
+      "rye": 1866.0,
+      "oats": 1621.0
+    },
+    "cp_moisture": "linear mixture of dry grain and water; illustrative approximation",
+    "air_rho_kg_m3": 1.2,
+    "air_cp_J_kg_K": 1005.0,
+    "vent_exchange_efficiency_eta": 0.2,
+    "heat_link_W_K": 0.026,
+    "room_heat_transfer_W_m2_K": 2.0,
+    "exposed_surface_m2": "1.5*V**(2/3), heuristic",
+    "latent_heat_J_kg": 2450000.0,
+    "relative_humidity": "FIXED at 60%; not included as feature",
+    "equilibrium_moisture_pct": 13.399999999999999,
+    "moisture_relaxation_tau_hours": "48/air_flow_m3_s, hypothetical",
+    "self_heat_W_kg": "0.002 * cultivar_factor * exp(0.06*(T-20)+0.18*(W-17)); hypothetical, not calibrated",
+    "thermal_communication": "1--2 and 2--3; no direct 1--3 connection",
+    "step_change": "ventilation temperature of middle bin changes once between 6 and 24 h",
+    "air_flow_caution": "0.5--2 m3/s per 300--2000kg zone is unusually high; user-specified experimental range",
+    "heat_link_caution": "0.026 W/K assumes stagnant air, 1m, 1m2; strongly underestimates convection/radiation if present",
+    "validation_caution": "Generated values depend on unvalidated coefficients; compare with measured data before scientific claims."
+  }
+}
